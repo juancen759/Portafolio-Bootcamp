@@ -1,0 +1,47 @@
+//Mixins
+%titulo {
+    background: rgb(227, 236, 14);
+    background: linear-gradient(227deg, rgba(227, 236, 14, 1) 18%, rgba(211, 203, 29, 1) 31%, rgba(210, 200, 30, 1) 37%, rgba(121, 116, 11, 1) 47%, rgba(33, 36, 6, 1) 66%);
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    font-size: 7vw;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+%subtitulo {
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+%boton {
+    width: 100%;
+    background-color: black;
+    border: none;
+    padding: 6px;
+    color: white;
+    margin: 9px 0;
+    font-size: 16px;
+    ;
+}
+
+%formulario {
+    border-radius: 15px;
+    position: absolute;
+    top: 19%;
+    right: 20px;
+    width: 30%;
+    height: 80%;
+    font-family: 'Anton';
+    background-color: #ebe115;
+}
+
+//variables
+$color-1: #f6f208;
+$color-2:black;
+$color-3:white;
+$fuente-1:'Roboto';
+$fuente-2:'Anton';

@@ -1,0 +1,126 @@
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url(img/background.jpg);
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            position: relative;
+            opacity: 0.9;
+        }
+        
+        .contenedor {
+            width: 100%;
+            .header {
+                width: 100vw;
+                height: 60vh;
+                background-image: url(img/ciudad.jpg);
+                background-position: center;
+                background-size: cover;
+                position: relative;
+                .Titulo-portafolio {
+                    width: 70vw;
+                    height: 20vh;
+                    position: absolute;
+                    left: 15%;
+                    bottom: 0px;
+                    font-size: 9.5vw;
+                    h1 {
+                        @extend %titulo;
+                        @media (max-width: 768px) {
+                            font-size: 9.5vw;
+                        }
+                    }
+                }
+                .menu {
+                    width: 100%;
+                    background: $color-1;
+                    position: fixed;
+                    z-index: 1;
+                    #btn-menu {
+                        display: none;
+                        @media(max-width: 768px) {
+                            &:checked ~ .Barra {
+                                margin: 0;
+                                position: fixed;
+                                z-index: 1;
+                            }
+                        }
+                    }
+                    label {
+                        display: none;
+                        width: 30px;
+                        height: 40px;
+                        padding: 8px;
+                        color: $color-2;
+                        @media(max-width: 768px) {
+                            display: block;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            background: rgba(0, 0, 0, 0.3);
+                            transition: 1s;
+                        }
+                    }
+                    .Barra {
+                        @media(max-width: 768px) {
+                            position: absolute;
+                            background: $color-1;
+                            width: 30%;
+                            margin-left: -30%;
+                            transition: all 0.5s;
+                        }
+                        ul {
+                            margin: 0;
+                            list-style: none;
+                            padding: 0;
+                            display: flex;
+                            @media(max-width: 768px) {
+                                flex-direction: column;
+                            }
+                            li {
+                                flex-grow: 1;
+                                text-align: center;
+                                @media(max-width: 768px) {
+                                    border-top: 1px solid $color-2;
+                                }
+                                &:hover {
+                                    background-color: $color-2;
+                                }
+                                a {
+                                    display: block;
+                                    padding: 15px 20px;
+                                    color: $color-2;
+                                    text-decoration: none;
+                                    font-family: $fuente-1;
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                    &:hover {
+                                        color: $color-3;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .foto-perfil {
+                    width: 200px;
+                    height: 200px;
+                    position: absolute;
+                    right: 20px;
+                    top: 60px;
+                    @media(max-width: 768px) {
+                        margin: 0 auto;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
